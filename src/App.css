@@ -1,0 +1,57 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* formStyles.css */
+
+/* Apply general styles to the form */
+form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Style input fields */
+input[type="text"],
+select,
+input[type="radio"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style radio buttons */
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Style submit button */
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style submit button on hover */
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
