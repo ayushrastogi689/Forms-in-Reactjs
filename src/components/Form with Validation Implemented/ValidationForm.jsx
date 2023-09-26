@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../App.css";
+
 function ValidationForm() {
   const [formData, setFormData] = useState({
     fullname: "",
@@ -72,10 +73,13 @@ function ValidationForm() {
 
   return (
     <div>
+      <div>
+        <h3>Form with validation implement in same file</h3>
+      </div>
       {JSON.stringify(formData)}
       <form>
         <div>
-          <label htmlFor="">Full Name:</label>
+          <label>Full Name:</label>
           <input
             onChange={getFormData}
             type="text"
@@ -86,7 +90,7 @@ function ValidationForm() {
           />
         </div>
         <div>
-          <label htmlFor="">Email:</label>
+          <label>Email:</label>
           <input
             onChange={getFormData}
             type="text"
@@ -97,7 +101,7 @@ function ValidationForm() {
           />
         </div>
         <div>
-          <label htmlFor="">Address:(optional)</label>
+          <label>Address:(optional)</label>
           <input
             onChange={getFormData}
             type="text"
@@ -108,7 +112,7 @@ function ValidationForm() {
           />
         </div>
         <div>
-          <label htmlFor="">State:</label>
+          <label>State:</label>
           <select
             onChange={getFormData}
             name="state"
@@ -124,7 +128,7 @@ function ValidationForm() {
           </select>
         </div>
         <div>
-          <label htmlFor="">Select a prefer time to call: </label>
+          <label>Select a prefer time to call: </label>
           <label>Morning</label>
           <input
             type="radio"
@@ -141,7 +145,7 @@ function ValidationForm() {
           />
         </div>
         <div>
-          <label htmlFor="">
+          <label>
             Do you agree to accept out <a href="/">T&C</a>
           </label>
           <input
