@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Input from "./Input";
+import Label from "./Label";
+import Button from "./Button";
 import { validateForm } from "../../utils/Validation";
 import "../../App.css";
 
@@ -46,7 +48,7 @@ function OptimizedForm() {
       {JSON.stringify(formData)}
       <form>
         <div>
-          <label>Full Name:</label>
+          <Label labelName="Full Name:"></Label>
           <Input
             onChange={getFormData}
             type="text"
@@ -57,7 +59,7 @@ function OptimizedForm() {
           />
         </div>
         <div>
-          <label>Email:</label>
+          <Label labelName="Email:" />
           <Input
             onChange={getFormData}
             type="text"
@@ -68,7 +70,7 @@ function OptimizedForm() {
           />
         </div>
         <div>
-          <label>Address:(optional)</label>
+          <Label labelName="Address:(optional)" />
           <Input
             onChange={getFormData}
             type="text"
@@ -79,7 +81,7 @@ function OptimizedForm() {
           />
         </div>
         <div>
-          <label>State:</label>
+          <Label labelName="State:" />
           <select
             onChange={getFormData}
             name="state"
@@ -95,15 +97,15 @@ function OptimizedForm() {
           </select>
         </div>
         <div>
-          <label>Select a prefer time to call: </label>
-          <label>Morning</label>
+          <Label labelName="Select a prefer time to call:" />
+          <Label labelName="Morning" />
           <Input
             type="radio"
             name="preferredTime"
             value="morning"
             onChange={getFormData}
           />
-          <label>Evening</label>
+          <Label labelName="Evening" />
           <Input
             type="radio"
             name="preferredTime"
@@ -122,7 +124,7 @@ function OptimizedForm() {
             checked={formData.terms}
           />
         </div>
-        <button onClick={submitForm}>Submit</button>
+        <Button onClick={submitForm} buttonLabel="Submit" />
       </form>
       {formError && <h5>{JSON.stringify(formError)}</h5>}
     </div>
